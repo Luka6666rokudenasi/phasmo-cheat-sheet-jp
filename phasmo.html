@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phasmophobia ゴーストチートシート</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #121212;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #80cbc4;
+      margin-bottom: 1rem;
+    }
+    .filters {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+      background: #1e1e1e;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .filters label {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.9rem;
+    }
+    .filters .evidence-group {
+      display: flex;
+      flex-direction: column;
+      max-height: 180px;
+      overflow-y: auto;
+      border: 1px solid #555;
+      padding: 0.5rem;
+      background: #263238;
+      border-radius: 4px;
+    }
+    .filters input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 0.6rem 0.4rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #263238;
+      color: #80cbc4;
+    }
+    tr:nth-child(even) {
+      background-color: #1e1e1e;
+    }
+    tr:hover {
+      background-color: #37474f;
+    }
+  </style>
+</head>
+<body>
+  <h1>Phasmophobia ゴーストチートシート</h1>
+
+  <div class="filters">
+    <label>
+      証拠:
+      <div class="evidence-group" id="evidenceChecks" style="flex-direction: row; flex-wrap: wrap; gap: 0.5rem;">
+  <label><input type="checkbox" value="EMFレベル5">EMFレベル5</label>
+  <label><input type="checkbox" value="スピリットボックス">スピリットボックス</label>
+  <label><input type="checkbox" value="ゴーストライティング">ゴーストライティング</label>
+  <label><input type="checkbox" value="ゴーストオーブ">ゴーストオーブ</label>
+  <label><input type="checkbox" value="氷点下の温度">氷点下の温度</label>
+  <label><input type="checkbox" value="紫外線">紫外線</label>
+  <label><input type="checkbox" value="D.O.T.S">D.O.T.S</label>
+</div>
+    </label>
+    <label>
+      視認加速:
+      <select id="speedFilter">
+        <option value="">すべて</option>
+        <option value="あり">あり</option>
+        <option value="なし">なし</option>
+      </select>
+    </label>
+    <label>
+      ハント正気度:
+      <select id="sanityFilter">
+        <option value="">すべて</option>
+        <option value="35%">35%</option>
+        <option value="40%">40%</option>
+        <option value="50%">50%</option>
+        <option value="60%">60%</option>
+        <option value="65%">65%</option>
+        <option value="70%">70%</option>
+        <option value="75%">75%</option>
+        <option value="80%">80%</option>
+      </select>
+    </label>
+  </div>
+
+  <table id="ghostTable">
+    <thead>
+      <tr>
+        <th>ゴースト名</th>
+        <th>証拠</th>
+        <th>ハント正気度</th>
+        <th>移動速度</th>
+        <th>特徴</th>
+        <th>能力</th>
+        <th>できない行動</th>
+        <th>視認加速</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>スピリット</td><td>EMFレベル5 / スピリットボックス / ゴーストライティング</td><td>50%</td><td>1.7m/s（通常）</td><td>最も標準的なゴーストで、目立った特殊能力はなし。</td><td>浄化香で180秒間ハントを防止（通常より長い）。</td><td>ワープ、加速、特殊視覚などの特殊行動は行わない。</td><td>なし</td></tr>
+<tr><td>レイス</td><td>EMFレベル5 / スピリットボックス / D.O.T.S</td><td>50%</td><td>1.7m/s（通常）</td><td>浮遊しており塩を踏んでも足跡を残さない。</td><td>ワープしてEMF2反応を起こすことがある。</td><td>塩に足跡を残すことがない。</td><td>なし</td></tr>
+<tr><td>ファントム</td><td>スピリットボックス / 紫外線 / D.O.T.S</td><td>50%</td><td>1.7m/s（通常）</td><td>写真に写らず、視認で正気度を大きく削る。</td><td>写真撮影で姿を一時的に消せる。点滅時間が長い。</td><td>写真に写ること。</td><td>なし</td></tr>
+<tr><td>ポルターガイスト</td><td>スピリットボックス / 紫外線 / ゴーストライティング</td><td>50%</td><td>1.7m/s（通常）</td><td>複数の物を同時に投げる物理干渉型。</td><td>アイテムを複数同時に投げて正気度を削る。</td><td>物のない場所では効果を発揮しない。</td><td>なし</td></tr>
+<tr><td>バンシー</td><td>紫外線 / ゴーストオーブ / D.O.T.S</td><td>ターゲットの正気度が50%以下</td><td>1.7m/s（通常）</td><td>単一プレイヤーを執拗に狙う。</td><td>指向性マイクで叫び声を検知できる。</td><td>ターゲット以外を攻撃しない。</td><td>なし</td></tr>
+<tr><td>ジン</td><td>EMFレベル5 / 紫外線 / 氷点下の温度</td><td>50%</td><td>2.5m/s（遠距離視認かつブレーカーON時）</td><td>電気の力で高速接近する。</td><td>正気度を25%即時減少させる特殊能力を持つ。</td><td>ブレーカーを自ら落とすことがない。</td><td>あり</td></tr>
+<tr><td>メアー</td><td>スピリットボックス / ゴーストオーブ / ゴーストライティング</td><td>60%（暗所）／40%（明所）</td><td>1.7m/s（通常）</td><td>暗い場所を好み、明るい場所では活動が弱まる。</td><td>電気を消したりブレーカーを落とすのが得意。</td><td>自分から明かりをつけることはない。</td><td>なし</td></tr>
+<tr><td>レヴナント</td><td>ゴーストオーブ / ゴーストライティング / 氷点下の温度</td><td>50%</td><td>1.0m/s（非視認）／3.0m/s（視認時）</td><td>視認時に超高速で移動、見失うと極端に遅くなる。</td><td>視認時は最速クラスのゴースト。</td><td>非視認状態で加速することはない。</td><td>あり</td></tr>
+<tr><td>シェード</td><td>EMFレベル5 / ゴーストライティング / 氷点下の温度</td><td>35%</td><td>1.7m/s（通常）</td><td>恥ずかしがり屋で複数人が近くにいると非活動的になる。</td><td>単独時に証拠や活動が発生しやすい。</td><td>複数人がいる場所ではハントを起こさない。</td><td>なし</td></tr>
+<tr><td>デーモン</td><td>紫外線 / ゴーストライティング / 氷点下の温度</td><td>70%</td><td>1.7m/s（通常）</td><td>最も早くハントを開始するゴースト。</td><td>十字架の妨害範囲が広く、効果回数も多い。</td><td>十字架のない場所では防ぎにくい。</td><td>なし</td></tr>
+<tr><td>幽霊</td><td>ゴーストオーブ / 氷点下の温度 / D.O.T.S</td><td>50%</td><td>1.7m/s（通常）</td><td>精神干渉で正気度を削る。物を動かさずに攻撃する。</td><td>ドアやアイテムを介さず正気度を下げられる。</td><td>物理干渉（投擲など）が少ない。</td><td>なし</td></tr>
+<tr><td>鬼</td><td>EMFレベル5 / 氷点下の温度 / D.O.T.S</td><td>50%</td><td>1.7m/s（通常）</td><td>物理干渉と視覚出現が活発な好戦的ゴースト。</td><td>物を投げる頻度が高く、姿もよく見せる。</td><td>大人しいふりをすることができない。</td><td>なし</td></tr>
+<tr><td>妖怪</td><td>スピリットボックス / ゴーストオーブ / D.O.T.S</td><td>80%（音声検知時）</td><td>1.7m/s（通常）</td><td>音に反応してハントを始めやすい。</td><td>音声・騒音を拾いやすく、話し声で怒る。</td><td>無音環境ではハントが起こりにくい。</td><td>なし</td></tr>
+<tr><td>ハントゥ</td><td>紫外線 / ゴーストオーブ / 氷点下の温度</td><td>50%</td><td>1.4〜2.7m/s（温度依存）</td><td>低温で速く、高温で遅い。ブレーカーをよく落とす。</td><td>寒い場所では高速移動。</td><td>温かい場所では加速できない。</td><td>なし</td></tr>
+<tr><td>御霊</td><td>EMFレベル5 / 紫外線 / D.O.T.S</td><td>50%</td><td>1.7m/s（通常）</td><td>D.O.T.Sはビデオ越しでしか映らない。</td><td>プレイヤーが近くにいるとD.O.T.Sに映らない。</td><td>直接目視でのD.O.T.S反応が見られない。</td><td>なし</td></tr>
+<tr><td>マイリング</td><td>EMFレベル5 / 紫外線 / ゴーストライティング</td><td>50%</td><td>1.7m/s（通常）</td><td>足音が遅れて聞こえる。静かに接近してくる。</td><td>声はマイクで拾いやすい。</td><td>遠距離では足音を鳴らさない。</td><td>なし</td></tr>
+<tr><td>怨霊</td><td>スピリットボックス / ゴーストオーブ / 氷点下の温度</td><td>60%</td><td>1.7m/s（通常）</td><td>火（キャンドル）を嫌い、消すとハントに繋がる。</td><td>火を3回消すと即ハント。十字架で防止可能。</td><td>火が灯っているとハントできない。</td><td>なし</td></tr>
+<tr><td>ツインズ</td><td>EMFレベル5 / スピリットボックス / 氷点下の温度</td><td>50%</td><td>1.5m/s（遅）／1.9m/s（速）</td><td>2体のように行動し、別々の場所で干渉を起こす。</td><td>別々の速度でハント可能。</td><td>両方が同時に同じ干渉を起こすことはない。</td><td>あり</td></tr>
+<tr><td>雷獣</td><td>EMFレベル5 / ゴーストオーブ / D.O.T.S</td><td>65%（電子機器が近くにあるとき）</td><td>1.7m/s（通常）／2.5m/s（電子機器近接）</td><td>電子機器の近くで加速する。</td><td>プレイヤーのアイテムが多いと移動速度が上がる。</td><td>電子機器がないと加速できない。</td><td>あり</td></tr>
+<tr><td>化け狐</td><td>EMFレベル5 / 紫外線 / ゴーストオーブ</td><td>50%</td><td>1.7m/s（通常）</td><td>まれに変異型の指紋を残すことがある。</td><td>指紋が6本指や短時間で消えるパターンがある。</td><td>変異型指紋は確定で発生しない。</td><td>なし</td></tr>
+<tr><td>ミミック</td><td>スピリットボックス / 紫外線 / 氷点下の温度（＋偽オーブ）</td><td>50%</td><td>コピー元に依存</td><td>他のゴーストの行動・能力・特徴を模倣する。</td><td>常に別のゴーストに偽装。証拠が混ざる。</td><td>本来の自分の能力が存在しない。</td><td>コピー先に依存</td></tr>
+<tr><td>モーロイ</td><td>スピリットボックス / ゴーストライティング / 氷点下の温度</td><td>50%</td><td>1.5m/s（通常）／2.25m/s（正気度0%）</td><td>正気度が低いほど移動速度が上がる。</td><td>声を通じて呪いをかけ、自然回復を妨げる。</td><td>高正気度では高速移動できない。</td><td>あり</td></tr>
+<tr><td>デオヘン</td><td>スピリットボックス / ゴーストライティング / D.O.T.S</td><td>40%</td><td>3.0m/s（非視認）／0.4m/s（視認時）</td><td>必ずプレイヤーを見つけるが、視認後は激遅になる。</td><td>隠れても追跡してくるが、視認後は逃げ切りやすい。</td><td>視認後に加速することはない（逆に減速）。</td><td>なし</td></tr>
+<tr><td>セーイ</td><td>ゴーストオーブ / ゴーストライティング / D.O.T.S</td><td>75%（初期）→時間経過で減少</td><td>2.75m/s（初期）→1.0m/s以下（老化）</td><td>出現からの時間経過で弱体化する。</td><td>最初は活発だが時間経過で活動と速度が低下。</td><td>老化後に強化状態へ戻ることはない。</td><td>あり（初期状態のみ）</td></tr>
+    </tbody>
+  </table>
+
+  <script>
+    const evidenceChecks = document.querySelectorAll('#evidenceChecks input[type="checkbox"]');
+    const speedFilter = document.getElementById('speedFilter');
+    const sanityFilter = document.getElementById('sanityFilter');
+    const table = document.getElementById('ghostTable');
+    const rows = table.querySelectorAll('tbody tr');
+
+    function filterTable() {
+      const selectedEvidence = Array.from(evidenceChecks)
+        .filter(checkbox => checkbox.checked)
+        .map(checkbox => checkbox.value);
+      const speed = speedFilter.value;
+      const sanity = sanityFilter.value;
+
+      rows.forEach(row => {
+        const evidenceText = row.children[1].textContent;
+        const sanityText = row.children[2].textContent;
+        const speedText = row.children[7].textContent;
+
+        const matchesEvidence = selectedEvidence.every(ev => evidenceText.includes(ev));
+        const matchesSanity = !sanity || sanityText.includes(sanity);
+        const matchesSpeed = !speed || speedText.includes(speed);
+
+        row.style.display = (matchesEvidence && matchesSanity && matchesSpeed) ? '' : 'none';
+      });
+    }
+
+    evidenceChecks.forEach(cb => cb.addEventListener('change', filterTable));
+    speedFilter.addEventListener('change', filterTable);
+    sanityFilter.addEventListener('change', filterTable);
+
+    // 初期状態ですべて表示
+    filterTable();
+  </script>
+</body>
+</html>
